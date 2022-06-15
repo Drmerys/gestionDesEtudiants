@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [StudentController::class, 'index'])->name('welcome');
+Route::get('/upgrade', [StudentController::class, 'upgrade'])->name('upgrade.student');
+Route::get('Contacter-nous', [StudentController::class, 'contact'])->name('contact');
+
+
 Route::get('/foo', '\App\Http\Controllers\TestController@foo',);
 Route::get('/bar', '\App\Http\Controllers\TestController@bar',);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
