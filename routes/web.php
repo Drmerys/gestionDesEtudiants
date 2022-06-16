@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::middleware('auth')->group(function () {
 Route::get('/', [StudentController::class, 'index'])->name('welcome');
 Route::get('/upgrade', [StudentController::class, 'upgrade'])->name('upgrade.student');
 Route::get('Contacter-nous', [StudentController::class, 'contact'])->name('contact');
+});
+
 
 
 Route::get('/foo', '\App\Http\Controllers\TestController@foo',);
