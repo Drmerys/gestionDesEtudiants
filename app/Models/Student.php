@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
+
+    public function upgrades()
+    {
+        return $this->hasMany(Upgrade::class);
+    }
 }
