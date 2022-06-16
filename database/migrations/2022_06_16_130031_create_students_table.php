@@ -22,6 +22,7 @@ class CreateStudentsTable extends Migration
             $table->string('studie');
             $table->string('phone');
             $table->string('educationLevel');
+            $table->foreignId('upgrade_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
