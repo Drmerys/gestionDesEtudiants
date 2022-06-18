@@ -13,4 +13,9 @@ class Upgrade extends Model
     {
         return $this->belongsTo(Student::class);
     }
+
+    public function matter()
+    {
+        return $this->belongsTo(Matter::class);
+    }
 }
