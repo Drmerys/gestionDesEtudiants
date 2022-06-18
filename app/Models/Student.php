@@ -13,4 +13,14 @@ class Student extends Model
     {
         return $this->hasMany(Upgrade::class);
     }
+
+    public function educationSector()
+    {
+        return $this->hasOne(EducationSector::class);
+    }
+
+    public function activities()
+    {
+        return $this->belongsToMany(Activity::class);
+    }
 }
