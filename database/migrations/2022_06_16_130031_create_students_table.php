@@ -19,7 +19,7 @@ class CreateStudentsTable extends Migration
             $table->string('firstName');
             $table->date('age');
             $table->string('email');
-            $table->string('studie');
+            $table->string('educationSector');
             $table->string('phone');
             $table->string('educationLevel');
             $table->foreignId('upgrade_id')->constrained()->onDelete('cascade');
