@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UpgradeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::middleware('auth')->group(function () {
 Route::get('/', [StudentController::class, 'index'])->name('welcome');
-Route::get('/upgrade', [StudentController::class, 'upgrade'])->name('upgrade.student');
+Route::get('/upgrade', [UpgradeController::class, 'showUpgrade'])->name('upgrade.student');
 Route::get('Contacter-nous', [StudentController::class, 'contact'])->name('contact');
 });
 

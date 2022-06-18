@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+    <h1>{{$title}}</h1>
+
+    @if($upgrades->count() > 0)
+        @foreach($upgrades as $upgrade)
+            <h1>{{$upgrade->matter}} || {{$upgrade->upgrade}} || {{$upgrade->date}} || </h1>
+        @endforeach
+    @else
+        <h2>Pas de notes disponible pour cette étudiant !</h2>
+    @endif
+
+
     <table class="table-auto">
     <thead>
     <tr>
