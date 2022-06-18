@@ -16,6 +16,7 @@ class CreateMattersTable extends Migration
         Schema::create('matters', function (Blueprint $table) {
             $table->id();
             $table->string('matter');
+            $table->foreignId('professor_id');
             $table->timestamps();
         });
     }
