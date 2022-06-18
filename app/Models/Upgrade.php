@@ -9,6 +9,8 @@ class Upgrade extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['matter', 'upgrade', 'date', 'average'];
+
     public function student()
     {
         return $this->belongsTo(Student::class);
