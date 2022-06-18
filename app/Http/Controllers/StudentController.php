@@ -11,12 +11,6 @@ class StudentController extends Controller
         return view('auth.login');
     }
 
-    public function upgrade()
-    {
-        $title = "Les notes !";
-        return view('student.upgrade', compact('title'));
-    }
-
     public function contact()
     {
         return view('contact');
