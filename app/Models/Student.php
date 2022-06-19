@@ -9,6 +9,17 @@ class Student extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'lastName',
+        'firstName',
+        'age',
+        'email',
+        'educationSector',
+        'phone',
+        'educationLevel',
+        'image'
+    ];
+
     public function upgrades()
     {
         return $this->hasMany(Upgrade::class);
