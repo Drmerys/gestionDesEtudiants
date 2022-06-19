@@ -10,7 +10,7 @@ class UpgradeController extends Controller
     {
         $title = "Les notes !";
         $getUpgrades = Upgrade::all();
-        $this->addUpgrade();
+        //$this->addUpgrade();
 
         return view('student.upgrade', [
             'title' => $title,

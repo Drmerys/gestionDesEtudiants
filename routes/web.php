@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::middleware('auth')->group(function () {
-Route::get('/', [StudentController::class, 'index'])->name('welcome');
+Route::get('/', [StudentController::class, 'home'])->name('welcome');
+Route::get('students', [StudentController::class, 'index'])->name('students.students');
+Route::get('create', [StudentController::class, 'store'])->name('students.create');
 Route::get('/upgrade', [UpgradeController::class, 'showUpgrade'])->name('upgrade.student');
 Route::get('Contacter-nous', [StudentController::class, 'contact'])->name('contact');
 });
