@@ -15,6 +15,8 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="../path/to/flowbite/dist/flowbite.js"></script>
+
     </head>
     <body class="font-sans antialiased">
 {{--    @include('partials.navbar')--}}
