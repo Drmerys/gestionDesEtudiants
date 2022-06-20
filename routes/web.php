@@ -17,15 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth')->group(function () {
 Route::get('/', [StudentController::class, 'home'])->name('welcome');
 Route::get('students', [StudentController::class, 'index'])->name('students.students');
-Route::get('create', [StudentController::class, 'store'])->name('students.create');
+Route::post('students/create', [StudentController::class, 'store'])->name('students.create');
+Route::get('/students/create', [StudentController::class, 'create'])->name('students_create');
 Route::get('/upgrade', [UpgradeController::class, 'showUpgrade'])->name('upgrade.student');
 Route::get('Contacter-nous', [StudentController::class, 'contact'])->name('contact');
 });
 
 
 
-Route::get('/foo', '\App\Http\Controllers\TestController@foo',);
-Route::get('/bar', '\App\Http\Controllers\TestController@bar',);
+//Route::get('/foo', '\App\Http\Controllers\TestController@foo',);
+//Route::get('/bar', '\App\Http\Controllers\TestController@bar',);
 
 
 //Route::get('/', function () {
