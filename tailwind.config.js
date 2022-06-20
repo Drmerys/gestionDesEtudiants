@@ -3,7 +3,7 @@ module.exports = {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
-        "./node_modules/flowbite/**/*.js",
+        "./node_modules/flowbite/dist/datepicker.js",
     ],
     theme: {
         extend: {},
