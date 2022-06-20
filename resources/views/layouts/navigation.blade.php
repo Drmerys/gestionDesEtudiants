@@ -25,7 +25,7 @@
                 </div>
 
                 <!-- Student -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div  class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('students.students')" :active="request()->routeIs('index')">
                         {{ __('Gestion étudiant') }}
                     </x-nav-link>
