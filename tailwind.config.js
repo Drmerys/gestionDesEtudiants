@@ -3,9 +3,13 @@ module.exports = {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
+        "./node_modules/flowbite/dist/datepicker.js",
     ],
     theme: {
         extend: {},
     },
-    plugins: [],
+
+    plugins: [
+        require('flowbite/plugin')
+    ]
 }

@@ -9,12 +9,18 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <!-- Scripts -->
+        <script src="node_modules/flowbite/dist/flowbite.js"></script>
+        <script src="node_modules/flowbite/dist/datepicker.js"></script>
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/datepicker.js"></script>
+
         <script src="{{ asset('js/app.js') }}" defer></script>
+
     </head>
     <body class="font-sans antialiased">
 {{--    @include('partials.navbar')--}}
@@ -38,5 +44,7 @@
                     @yield('content')
                 </div>
         </div>
+
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
     </body>
 </html>
