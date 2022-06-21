@@ -59,7 +59,7 @@ class StudentController extends Controller
 
         $students = Student::create($validateData);
 
-        return redirect('students.students');
+        return redirect('students');
     }
 
     public function show()

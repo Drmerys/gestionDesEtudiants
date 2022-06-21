@@ -19,6 +19,8 @@ class CreateUpgradesTable extends Migration
             $table->float('upgrade');
             $table->dateTime('date');
             $table->float('average');
+            $table->unsignedBigInteger('student_id');
+            $table->foreign('student_id')->references('id')->on('students');
             $table->timestamps();
         });
     }
