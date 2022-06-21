@@ -4,38 +4,29 @@
     <h1>{{$title}}</h1>
 
     @if($upgrades->count() > 0)
-        @foreach($upgrades as $upgrade)
-            <h1>{{$upgrade->matter}} || {{$upgrade->upgrade}} || {{$upgrade->date}} || </h1>
-        @endforeach
+        <table class="table-auto">
+            <thead>
+            <tr>
+                <th>Matière</th>
+                <th>Note</th>
+                <th>date</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach($upgrades as $upgrade)
+                    <tr>
+                        <td>{{$upgrade->matter}}</td>
+                        <td>{{$upgrade->upgrade}}</td>
+                        <td>{{$upgrade->date}}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     @else
-        <h2>Pas de notes disponible pour cette étudiant !</h2>
+        <div class="bg-orange-100 border-orange-500 text-orange-700 p-4" role="alert">
+            <p class="font-bold">Liste Vide</p>
+            <p>Il y a pas de notes disponible !</p>
+        </div>
     @endif
 
-
-    <table class="table-auto">
-    <thead>
-    <tr>
-        <th>Song</th>
-        <th>Artist</th>
-        <th>Year</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-        <td>Malcolm Lockyer</td>
-        <td>1961</td>
-    </tr>
-    <tr>
-        <td>Witchy Woman</td>
-        <td>The Eagles</td>
-        <td>1972</td>
-    </tr>
-    <tr>
-        <td>Shining Star</td>
-        <td>Earth, Wind, and Fire</td>
-        <td>1975</td>
-    </tr>
-    </tbody>
-    </table>
 @endsection
