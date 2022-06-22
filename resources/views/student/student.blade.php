@@ -31,6 +31,15 @@
                                     <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                         Téléphone
                                     </th>
+                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                        Voir
+                                    </th>
+                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                        Modifier
+                                    </th>
+                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                        Supprimer
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,6 +63,27 @@
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{$student->phone}}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            <form method="POST">
+                                                <button onclick="location.href='{{route('students.show', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-500 rounded-full">
+                                                    Voir plus
+                                                </button>
+{{--                                                <x-button class="text-blue-800 bg-blue text-blue-800 ml-4">--}}
+{{--                                                    {{ __('Ajouter') }}--}}
+{{--                                                </x-button>--}}
+{{--                                                <button class="btn btn-blue" href="{{route('students.show', $student->id)}}">Show</button>--}}
+                                            </form>
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            <button onclick="location.href='{{route('students.show', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-green-800 bg-green-500 rounded-full">
+                                                Modifier
+                                            </button>
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            <button onclick="location.href='{{route('students.show', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-red-800 bg-red-500 rounded-full">
+                                                Supprimer
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
