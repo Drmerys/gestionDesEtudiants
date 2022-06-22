@@ -24,7 +24,7 @@ Route::get('/students/edit/{id}', [StudentController::class, 'edit'])->name('stu
 Route::post('/students/edit/{id}', [StudentController::class, 'update'])->name('students_edit');
 Route::get('/students/destroy/{id}', [StudentController::class, 'destroy'])->name('students.destroy');
 Route::get('/upgrade', [UpgradeController::class, 'showUpgrade'])->name('upgrade.student');
-Route::get('Contacter-nous', [StudentController::class, 'contact'])->name('contact');
+Route::get('/contact', [StudentController::class, 'contact'])->name('students.contact');
 });
 
 
