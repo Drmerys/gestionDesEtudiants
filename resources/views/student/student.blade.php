@@ -13,15 +13,15 @@
                                     <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                         ID
                                     </th>
-                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                        Nom
-                                    </th>
+{{--                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">--}}
+{{--                                        Nom--}}
+{{--                                    </th>--}}
                                     <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                         Prénom
                                     </th>
-                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                        Email
-                                    </th>
+{{--                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">--}}
+{{--                                        Email--}}
+{{--                                    </th>--}}
                                     <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                         Filière
                                     </th>
@@ -46,15 +46,15 @@
                                 @foreach($students as $student)
                                     <tr class="bg-white border-b">
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{$student->id}}</td>
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$student->lastName}}
-                                        </td>
+{{--                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">--}}
+{{--                                            {{$student->lastName}}--}}
+{{--                                        </td>--}}
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{$student->firstName}}
                                         </td>
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$student->email}}
-                                        </td>
+{{--                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">--}}
+{{--                                            {{$student->email}}--}}
+{{--                                        </td>--}}
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{$student->educationSector}}
                                         </td>
@@ -66,24 +66,18 @@
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             <form method="POST">
-                                                <button onclick="location.href='{{route('students.show', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-500 rounded-full">
-                                                    Voir plus
-                                                </button>
-{{--                                                <x-button class="text-blue-800 bg-blue text-blue-800 ml-4">--}}
-{{--                                                    {{ __('Ajouter') }}--}}
-{{--                                                </x-button>--}}
-{{--                                                <button class="btn btn-blue" href="{{route('students.show', $student->id)}}">Show</button>--}}
+                                                <a href="{{route('students.show', $student->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Voir plus</a>
                                             </form>
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <button onclick="location.href='{{route('students.edit', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-green-800 bg-green-500 rounded-full">
-                                                Modifier
-                                            </button>
+                                            <form method="POST">
+                                                <a href="{{route('students.edit', $student->id)}}" class="font-medium text-green-600 dark:text-green-500 hover:underline">Modifier</a>
+                                            </form>
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <button onclick="location.href='{{route('students.destroy', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-red-800 bg-red-500 rounded-full">
-                                                Supprimer
-                                            </button>
+                                            <form method="POST">
+                                                <a href="{{route('students.destroy', $student->id)}}" class="font-medium text-red-600 dark:text-red-500 hover:underline">Supprimer</a>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
