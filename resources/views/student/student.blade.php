@@ -69,5 +69,4 @@
             <p>Il y a pas de d'étudiants inscrit !</p>
         </div>
     @endif
-
 @endsection

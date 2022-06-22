@@ -68,6 +68,21 @@ class StudentController extends Controller
 //        return view('student.student', compact('students'));
     }
 
+    public function edit()
+    {
+
+    }
+
+    public function update()
+    {
+
+    }
+
+    public function destroy()
+    {
+
+    }
+
     public function contact()
     {
         return view('contact');

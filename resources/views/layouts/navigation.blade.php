@@ -20,14 +20,14 @@
                 <!-- Upgrade -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('upgrade.student')" :active="request()->routeIs('showUpgrade')">
-                        {{ __('Upgrade') }}
+                        {{ __('Notes') }}
                     </x-nav-link>
                 </div>
 
                 <!-- Student -->
                 <div  class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('students.students')" :active="request()->routeIs('index')">
-                        {{ __('Gestion étudiant') }}
+                        {{ __('Gestion des étudiant') }}
                     </x-nav-link>
                 </div>
             </div>
