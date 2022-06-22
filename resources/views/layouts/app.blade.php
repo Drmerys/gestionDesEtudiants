@@ -15,8 +15,9 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <!-- Scripts -->
-        <script src="node_modules/flowbite/dist/flowbite.js"></script>
         <script src="node_modules/flowbite/dist/datepicker.js"></script>
+        <script src="node_modules/flowbite/dist/flowbite.js"></script>
+        <script src="node_modules/flowbite-datepicker/dist/js/datepicker.js"></script>
         <script src="https://unpkg.com/flowbite@1.4.7/dist/datepicker.js"></script>
 
         <script src="{{ asset('js/app.js') }}" defer></script>
