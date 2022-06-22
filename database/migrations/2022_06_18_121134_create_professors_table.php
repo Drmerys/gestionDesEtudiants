@@ -18,7 +18,8 @@ class CreateProfessorsTable extends Migration
             $table->string('lastName');
             $table->string('firstName');
             $table->date('age');
-            $table->string('email');
+            $table->string('phone')->unique();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
