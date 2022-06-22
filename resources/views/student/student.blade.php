@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    @if($message = session::get('success'))
-        <p style="color: green">{{$message}}</p>
-    @endif
+{{--    @if($message = session::get('success'))--}}
+{{--        <p style="color: green">{{$message}}</p>--}}
+{{--    @endif--}}
 
     <h1 class="text-center">Liste des étudiants </h1>
     @if($students->count() > 0)
