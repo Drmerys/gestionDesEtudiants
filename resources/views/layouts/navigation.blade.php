@@ -13,7 +13,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Accueil') }}
                     </x-nav-link>
                 </div>
 
@@ -27,7 +27,28 @@
                 <!-- Student -->
                 <div  class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('students.students')" :active="request()->routeIs('index')">
-                        {{ __('Gestion des étudiant') }}
+                        {{ __('Etudiants') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- Professor -->
+                <div  class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('students.students')" :active="request()->routeIs('index')">
+                        {{ __('Enseignants') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- Activities -->
+                <div  class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('students.students')" :active="request()->routeIs('index')">
+                        {{ __('Activités') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- Contact -->
+                <div  class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('students.contact')" :active="request()->routeIs('contact')">
+                        {{ __('Contact') }}
                     </x-nav-link>
                 </div>
             </div>
