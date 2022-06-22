@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+    @if($message = session::get('success'))
+        <p style="color: green">{{$message}}</p>
+    @endif
+
     <h1 class="text-center">Liste des étudiants </h1>
     @if($students->count() > 0)
         <div class="flex flex-col items-center">
@@ -66,16 +70,19 @@
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             <form method="POST">
+                                                @csrf
                                                 <a href="{{route('students.show', $student->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Voir plus</a>
                                             </form>
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             <form method="POST">
+                                                @csrf
                                                 <a href="{{route('students.edit', $student->id)}}" class="font-medium text-green-600 dark:text-green-500 hover:underline">Modifier</a>
                                             </form>
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             <form method="POST">
+                                                @csrf
                                                 <a href="{{route('students.destroy', $student->id)}}" class="font-medium text-red-600 dark:text-red-500 hover:underline">Supprimer</a>
                                             </form>
                                         </td>
