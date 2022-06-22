@@ -8,7 +8,7 @@ class UpgradeController extends Controller
 {
     public function showUpgrade()
     {
-        $title = "Les notes !";
+        $title = "Les notes ";
         $getUpgrades = Upgrade::all();
         //$this->addUpgrade();
 
