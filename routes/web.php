@@ -20,6 +20,7 @@ Route::get('students', [StudentController::class, 'index'])->name('students.stud
 Route::post('students/create', [StudentController::class, 'store'])->name('students.create');
 Route::get('/students/create', [StudentController::class, 'create'])->name('students_create');
 Route::get('/students/show', [StudentController::class, 'show'])->name('students.show');
+Route::get('/students/edit', [StudentController::class, 'edit'])->name('students.edit');
 Route::get('/upgrade', [UpgradeController::class, 'showUpgrade'])->name('upgrade.student');
 Route::get('Contacter-nous', [StudentController::class, 'contact'])->name('contact');
 });

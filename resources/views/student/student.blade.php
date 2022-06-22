@@ -76,12 +76,12 @@
                                             </form>
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <button onclick="location.href='{{route('students.show', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-green-800 bg-green-500 rounded-full">
+                                            <button onclick="location.href='{{route('students.edit', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-green-800 bg-green-500 rounded-full">
                                                 Modifier
                                             </button>
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <button onclick="location.href='{{route('students.show', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-red-800 bg-red-500 rounded-full">
+                                            <button onclick="location.href='{{route('students.destroy', $student->id)}}'" type="button" class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-red-800 bg-red-500 rounded-full">
                                                 Supprimer
                                             </button>
                                         </td>
