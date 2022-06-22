@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>{{$title}}</h1>
+    <h1 class="text-center">{{$title}}</h1>
 
     @if($upgrades->count() > 0)
         <table class="table-auto">
