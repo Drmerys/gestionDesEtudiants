@@ -51,24 +51,26 @@ class StudentController extends Controller
             'image' => 'image|mimes:png,jpeg,jpg,gif,svg',
         ]);
 
-//        $image = $request->file('image');
-//        $destinationPath = 'image/';
-//        $profileImage = date('YmdHis'). "." .$image->getClientOriginalExtension();
-//        $image->move($destinationPath, $profileImage);
-//        $validateData['image'] = $profileImage;
+        $image = $request->file('image');
+        $destinationPath = 'image/';
+        $profileImage = date('YmdHis'). "." .$image->getClientOriginalExtension();
+        $image->move($destinationPath, $profileImage);
+        $validateData['image'] = $profileImage;
 
         $students = Student::create($validateData);
 
         return redirect('students');
     }
 
-    public function show()
+    public function show($id)
     {
-//        $students = Student::all();
-//        return view('student.student', compact('students'));
+        $students = Student::findOrFail($id);
+        return view('student.show', [
+            'students' => $students
+        ]);
     }
 
-    public function edit()
+    public function edit($id)
     {
 
     }
@@ -78,9 +80,11 @@ class StudentController extends Controller
 
     }
 
-    public function destroy()
+    public function destroy($id)
     {
+        Student::find($id)->delete();
 
+        return redirect()->route('students.students')->with('success', 'Etudiant supprimé avec succès');
     }
 
     public function contact()
