@@ -81,7 +81,14 @@ class StudentController extends Controller
     public function update(Request $request, Student  $student)
     {
         $request->validate([
-
+            'lastName' => 'required|max:255',
+            'firstName' => 'required|max:255',
+            'age' => 'required',
+            'email' => 'required|max:255',
+            'educationSector' => 'required|max:255',
+            'phone' => 'required',
+            'educationLevel' => 'required|max:255',
+            'image' => 'image|mimes:png,jpeg,jpg,gif,svg',
         ]);
 
         $student->update($request->all());
@@ -98,7 +105,7 @@ class StudentController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        return view('student.contact');
     }
 
 }
