@@ -72,12 +72,21 @@ class StudentController extends Controller
 
     public function edit($id)
     {
-
+        $students = Student::findOrFail($id);
+        return view('student.edit', [
+            'students' => $students
+        ]);
     }
 
-    public function update()
+    public function update(Request $request, Student  $student)
     {
+        $request->validate([
 
+        ]);
+
+        $student->update($request->all());
+
+        return redirect()->route('students.students')->with('success', 'Etudiant modifié avec succès');
     }
 
     public function destroy($id)
