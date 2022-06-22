@@ -20,7 +20,8 @@ Route::get('students', [StudentController::class, 'index'])->name('students.stud
 Route::post('students/create', [StudentController::class, 'store'])->name('students.create');
 Route::get('/students/create', [StudentController::class, 'create'])->name('students_create');
 Route::get('/students/show/{id}', [StudentController::class, 'show'])->name('students.show');
-Route::get('/students/edit', [StudentController::class, 'edit'])->name('students.edit');
+Route::get('/students/edit/{id}', [StudentController::class, 'edit'])->name('students.edit');
+Route::post('/students/edit/{id}', [StudentController::class, 'update'])->name('students_edit');
 Route::get('/students/destroy/{id}', [StudentController::class, 'destroy'])->name('students.destroy');
 Route::get('/upgrade', [UpgradeController::class, 'showUpgrade'])->name('upgrade.student');
 Route::get('Contacter-nous', [StudentController::class, 'contact'])->name('contact');
