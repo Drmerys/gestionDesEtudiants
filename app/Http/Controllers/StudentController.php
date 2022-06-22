@@ -59,7 +59,7 @@ class StudentController extends Controller
 
         $students = Student::create($validateData);
 
-        return redirect('students');
+        return redirect('students')->with('success', 'Etudiant ajouté avec succès');
     }
 
     public function show($id)
