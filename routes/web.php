@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UpgradeController;
+use App\Http\Controllers\ProfessorController;
+use App\Http\Controllers\ActivityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +26,8 @@ Route::get('/students/edit/{id}', [StudentController::class, 'edit'])->name('stu
 Route::post('/students/edit/{id}', [StudentController::class, 'update'])->name('students_edit');
 Route::get('/students/destroy/{id}', [StudentController::class, 'destroy'])->name('students.destroy');
 Route::get('/upgrade', [UpgradeController::class, 'showUpgrade'])->name('upgrade.student');
+Route::get('/professor', [ProfessorController::class, 'index'])->name('professors.show');
+Route::get('/activity', [ActivityController::class, 'index'])->name('activity.show');
 Route::get('/contact', [StudentController::class, 'contact'])->name('students.contact');
 });
 
