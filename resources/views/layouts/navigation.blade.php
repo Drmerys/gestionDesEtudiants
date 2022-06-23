@@ -33,14 +33,14 @@
 
                 <!-- Professor -->
                 <div  class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('students.students')" :active="request()->routeIs('index')">
+                    <x-nav-link :href="route('professors.show')" :active="request()->routeIs('index')">
                         {{ __('Enseignants') }}
                     </x-nav-link>
                 </div>
 
                 <!-- Activities -->
                 <div  class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('students.students')" :active="request()->routeIs('index')">
+                    <x-nav-link :href="route('activity.show')" :active="request()->routeIs('index')">
                         {{ __('Activités') }}
                     </x-nav-link>
                 </div>
