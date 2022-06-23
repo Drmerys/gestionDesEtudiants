@@ -78,7 +78,7 @@ class StudentController extends Controller
         ]);
     }
 
-    public function update(Request $request, Student  $student)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'lastName' => 'required|max:255',
@@ -91,7 +91,17 @@ class StudentController extends Controller
             'image' => 'image|mimes:png,jpeg,jpg,gif,svg',
         ]);
 
-        $student->update($request->all());
+        $student = Student::findOrFail($id);
+        $student->lastName = $request->lastName;
+        $student->firstName = $request->firstName;
+        $student->age = $request->age;
+        $student->email = $request->email;
+        $student->educationSector = $request->educationSector;
+        $student->phone = $request->phone;
+        $student->educationLevel = $request->educationLevel;
+        $student->image = $request->image;
+
+        $student->save();
 
         return redirect()->route('students.students')->with('success', 'Etudiant modifié avec succès');
     }
