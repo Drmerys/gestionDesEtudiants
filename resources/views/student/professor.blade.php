@@ -35,10 +35,10 @@
                                     Module
                                 </th>
                                 <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                    Note
+                                    Prénom
                                 </th>
                                 <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                    Moyenne générale
+                                    Age
                                 </th>
                                 <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                     Téléphone
