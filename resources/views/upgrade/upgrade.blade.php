@@ -4,7 +4,7 @@
     <h1 class="text-center">{{$title}}</h1>
 
     <div class="flex space-x-2 justify-center mt-4">
-        <a href="{{route('students.create')}}" class="inline-block px-6 py-2.5 bg-green-500 font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out">Ajouter une note</a>
+        <a href="{{route('upgrade.create')}}" class="inline-block px-6 py-2.5 bg-green-500 font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out">Ajouter une note</a>
     </div>
 
     @if($upgrades->count() > 0)
@@ -52,10 +52,10 @@
                                         {{$upgrade->upgrade}}
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        {{$upgrade->date}}
+                                        {{$upgrade->average}}
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        {{$upgrade->average}}
+                                        {{$upgrade->date}}
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                         <form method="POST">
