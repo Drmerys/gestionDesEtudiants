@@ -15,24 +15,24 @@
                         <table class="min-w-full text-center">
                             <thead class="border-b bg-gray-800">
                                 <tr>
-                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                        ID
-                                    </th>
+{{--                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">--}}
+{{--                                        ID--}}
+{{--                                    </th>--}}
                                     <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                         Module
                                     </th>
                                     <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                         Note
                                     </th>
-                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                        Moyenne générale
-                                    </th>
+{{--                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">--}}
+{{--                                        Moyenne générale--}}
+{{--                                    </th>--}}
                                     <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                         date
                                     </th>
-                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                        Voir
-                                    </th>
+{{--                                    <th scope="col" class="text-sm font-medium text-white px-6 py-4">--}}
+{{--                                        Voir--}}
+{{--                                    </th>--}}
                                     <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                                         Modifier
                                     </th>
@@ -44,25 +44,25 @@
                             <tbody>
                             @foreach($upgrades as $upgrade)
                                 <tr class="bg-white border-b">
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{$upgrade->id}}</td>
+{{--                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{$upgrade->id}}</td>--}}
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                         {{$upgrade->matter}}
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                         {{$upgrade->upgrade}}
                                     </td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        {{$upgrade->average}}
-                                    </td>
+{{--                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">--}}
+{{--                                        {{$upgrade->average}}--}}
+{{--                                    </td>--}}
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                         {{$upgrade->date}}
                                     </td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        <form method="POST">
-                                            @csrf
-                                            <a href="{{route('students.show', $upgrade->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Voir plus</a>
-                                        </form>
-                                    </td>
+{{--                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">--}}
+{{--                                        <form method="POST">--}}
+{{--                                            @csrf--}}
+{{--                                            <a href="{{route('students.show', $upgrade->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Voir plus</a>--}}
+{{--                                        </form>--}}
+{{--                                    </td>--}}
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                         <form method="POST">
                                             @csrf
